@@ -27,7 +27,7 @@ const Footer = () => {
                                 <Dumbbell size={18} color="var(--text-inverse)" />
                             </div>
                             <span style={{ fontSize: '1.25rem', fontWeight: 900 }}>
-                                FIT<span style={{ color: 'var(--primary-color)' }}>AI</span>
+                                FIT<span style={{ color: 'var(--primary-color)' }}>NESSSS</span>
                             </span>
                         </div>
                         <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
@@ -75,7 +75,7 @@ const Footer = () => {
                     color: 'var(--text-secondary)',
                     fontSize: '0.9rem'
                 }}>
-                    &copy; {new Date().getFullYear()} FitAI Inc. All rights reserved.
+                    &copy; {new Date().getFullYear()} Fitnessss Inc. All rights reserved.
                 </div>
             </div>
         </footer>

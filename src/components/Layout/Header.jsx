@@ -5,8 +5,8 @@ import '../../index.css';
 
 const Header = () => {
   return (
-    <header style={{ 
-      borderBottom: '1px solid var(--surface-hover)', 
+    <header style={{
+      borderBottom: '1px solid var(--surface-hover)',
       padding: 'var(--spacing-md) 0',
       position: 'sticky',
       top: 0,
@@ -16,19 +16,19 @@ const Header = () => {
     }}>
       <div className="container flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-sm">
-          <div style={{ 
-            width: 40, 
-            height: 40, 
-            backgroundColor: 'var(--primary-color)', 
+          <div style={{
+            width: 40,
+            height: 40,
+            backgroundColor: 'var(--primary-color)',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-             <Dumbbell size={24} color="var(--text-inverse)" />
+            <Dumbbell size={24} color="var(--text-inverse)" />
           </div>
           <span style={{ fontSize: '1.5rem', fontWeight: 900, letterSpacing: '-1px' }}>
-            FIT<span style={{ color: 'var(--primary-color)' }}>AI</span>
+            FIT<span style={{ color: 'var(--primary-color)' }}>NESSSS</span>
           </span>
         </NavLink>
 

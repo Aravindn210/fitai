@@ -11,11 +11,11 @@ const ProgramList = ({ programs }) => {
     }
 
     return (
-        <div className="grid gap-lg" style={{
-            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))'
-        }}>
+        <div className="flex flex-wrap justify-center gap-lg">
             {programs.map(program => (
-                <ProgramCard key={program.id} program={program} />
+                <div key={program.id} style={{ width: '350px', maxWidth: '100%' }}>
+                    <ProgramCard program={program} />
+                </div>
             ))}
         </div>
     );

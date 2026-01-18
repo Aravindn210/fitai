@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
+import ScrollToTop from './components/Layout/ScrollToTop';
 
 // Placeholder Pages
 import ProgramsPage from './components/Programs/ProgramsPage';
@@ -12,6 +13,7 @@ import RecommendedPage from './components/Programs/RecommendedPage';
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="app-layout" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Header />
         <main style={{ flex: 1 }}>

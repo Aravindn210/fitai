@@ -26,8 +26,7 @@ const Header = () => {
       padding: 'var(--spacing-md) 0',
       position: 'sticky',
       top: 0,
-      backgroundColor: 'rgba(10, 10, 10, 0.9)',
-      backdropFilter: 'blur(10px)',
+      backgroundColor: '#0a0a0a', // Solid background to prevent transparency issues
       zIndex: 100
     }}>
       <div className="container flex items-center justify-between">

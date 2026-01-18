@@ -211,3 +211,26 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* Header Responsiveness */
+.desktop-nav,
+.desktop-actions {
+  display: flex !important;
+  /* Ensure flex overrides any other display */
+}
+
+.mobile-toggle {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+
+  .desktop-nav,
+  .desktop-actions {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: block !important;
+  }
+}

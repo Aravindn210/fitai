@@ -50,14 +50,14 @@ const Header = () => {
         </NavLink>
 
         {/* Desktop Nav */}
-        <nav className="desktop-nav flex gap-lg">
+        <nav className="desktop-nav gap-lg">
           <NavLink to="/" style={navLinkStyle}>Programs</NavLink>
           <NavLink to="/recommended" style={navLinkStyle}>For You</NavLink>
           <NavLink to="/pricing" style={navLinkStyle}>Membership</NavLink>
         </nav>
 
         {/* Desktop Actions */}
-        <div className="desktop-actions flex gap-md">
+        <div className="desktop-actions gap-md">
           <button className="flex items-center gap-sm" style={{ color: 'var(--text-secondary)' }}>
             <User size={20} />
             <span>Login</span>
@@ -107,24 +107,6 @@ const Header = () => {
           </div>
         </div>
       )}
-
-      <style>{`
-        .desktop-nav, .desktop-actions {
-          display: flex;
-        }
-        .mobile-toggle {
-          display: none;
-        }
-
-        @media (max-width: 768px) {
-          .desktop-nav, .desktop-actions {
-            display: none;
-          }
-          .mobile-toggle {
-            display: block;
-          }
-        }
-      `}</style>
     </header>
   );
 };

@@ -2,24 +2,26 @@
   --bg-color: #0a0a0a;
   --surface-color: #1a1a1a;
   --surface-hover: #2a2a2a;
-  --primary-color: #ccff00; /* Neon Lime/Yellow */
-  --secondary-color: #ff4d00; /* Vibrant Orange */
+  --primary-color: #ccff00;
+  /* Neon Lime/Yellow */
+  --secondary-color: #ff4d00;
+  /* Vibrant Orange */
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
   --text-inverse: #000000;
-  
+
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-  
+
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 48px;
-  
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 24px;
-  
+
   --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-glow: 0 0 20px rgba(204, 255, 0, 0.15);
 }
@@ -38,7 +40,12 @@ body {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   line-height: 1.1;
   font-weight: 700;
@@ -69,16 +76,41 @@ button {
   padding: 0 var(--spacing-md);
 }
 
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-between { justify-content: space-between; }
-.justify-center { justify-content: center; }
-.flex-col { flex-direction: column; }
-.gap-sm { gap: var(--spacing-sm); }
-.gap-md { gap: var(--spacing-md); }
-.gap-lg { gap: var(--spacing-lg); }
+.flex {
+  display: flex;
+}
 
-.grid { display: grid; }
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.grid {
+  display: grid;
+}
 
 .btn {
   padding: 12px 24px;
@@ -93,6 +125,7 @@ button {
   background-color: var(--primary-color);
   color: var(--text-inverse);
 }
+
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(204, 255, 0, 0.4);
@@ -103,6 +136,7 @@ button {
   color: var(--text-primary);
   border: 1px solid var(--text-secondary);
 }
+
 .btn-secondary:hover {
   background-color: var(--surface-hover);
   border-color: var(--text-primary);
@@ -112,6 +146,7 @@ button {
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
 }
+
 .btn-outline:hover {
   background-color: var(--primary-color);
   color: var(--text-inverse);
@@ -136,13 +171,31 @@ button {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--surface-color);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-xl: 32px;
+    --spacing-lg: 16px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
 }

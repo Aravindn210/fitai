@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Dumbbell, User } from 'lucide-react';
+import { Dumbbell, User, Menu, X } from 'lucide-react';
 import '../../index.css';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const navLinkStyle = ({ isActive }) => ({
+    color: isActive ? 'var(--primary-color)' : 'var(--text-primary)',
+    fontWeight: 500,
+    fontSize: '1.1rem'
+  });
+
   return (
     <header style={{
       borderBottom: '1px solid var(--surface-hover)',
       padding: 'var(--spacing-md) 0',
       position: 'sticky',
       top: 0,
-      backgroundColor: 'rgba(10, 10, 10, 0.8)',
+      backgroundColor: 'rgba(10, 10, 10, 0.9)',
       backdropFilter: 'blur(10px)',
       zIndex: 100
     }}>
       <div className="container flex items-center justify-between">
-        <NavLink to="/" className="flex items-center gap-sm">
+        {/* Logo */}
+        <NavLink to="/" className="flex items-center gap-sm" onClick={closeMenu}>
           <div style={{
             width: 40,
             height: 40,
@@ -32,22 +49,15 @@ const Header = () => {
           </span>
         </NavLink>
 
-        <nav className="flex gap-lg">
-          <NavLink to="/" style={({ isActive }) => ({
-            color: isActive ? 'var(--primary-color)' : 'var(--text-primary)',
-            fontWeight: 500
-          })}>Programs</NavLink>
-          <NavLink to="/recommended" style={({ isActive }) => ({
-            color: isActive ? 'var(--primary-color)' : 'var(--text-primary)',
-            fontWeight: 500
-          })}>For You</NavLink>
-          <NavLink to="/pricing" style={({ isActive }) => ({
-            color: isActive ? 'var(--primary-color)' : 'var(--text-primary)',
-            fontWeight: 500
-          })}>Membership</NavLink>
+        {/* Desktop Nav */}
+        <nav className="desktop-nav flex gap-lg">
+          <NavLink to="/" style={navLinkStyle}>Programs</NavLink>
+          <NavLink to="/recommended" style={navLinkStyle}>For You</NavLink>
+          <NavLink to="/pricing" style={navLinkStyle}>Membership</NavLink>
         </nav>
 
-        <div className="flex gap-md">
+        {/* Desktop Actions */}
+        <div className="desktop-actions flex gap-md">
           <button className="flex items-center gap-sm" style={{ color: 'var(--text-secondary)' }}>
             <User size={20} />
             <span>Login</span>
@@ -56,7 +66,65 @@ const Header = () => {
             Get Started
           </button>
         </div>
+
+        {/* Mobile Menu Toggle */}
+        <button className="mobile-toggle" onClick={toggleMenu} style={{ color: 'var(--text-primary)' }}>
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div style={{
+          position: 'fixed',
+          top: '73px', // Approximate header height
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'var(--bg-color)',
+          zIndex: 99,
+          padding: 'var(--spacing-xl)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 'var(--spacing-xl)',
+          borderTop: '1px solid var(--surface-hover)'
+        }}>
+          <nav className="flex flex-col gap-lg items-center">
+            <NavLink to="/" style={navLinkStyle} onClick={closeMenu}>Programs</NavLink>
+            <NavLink to="/recommended" style={navLinkStyle} onClick={closeMenu}>For You</NavLink>
+            <NavLink to="/pricing" style={navLinkStyle} onClick={closeMenu}>Membership</NavLink>
+          </nav>
+
+          <div className="flex flex-col gap-md items-center w-full">
+            <button className="btn btn-primary" style={{ width: '100%', maxWidth: '300px' }} onClick={closeMenu}>
+              Get Started
+            </button>
+            <button className="flex items-center gap-sm" style={{ color: 'var(--text-secondary)' }} onClick={closeMenu}>
+              <User size={20} />
+              <span>Login</span>
+            </button>
+          </div>
+        </div>
+      )}
+
+      <style>{`
+        .desktop-nav, .desktop-actions {
+          display: flex;
+        }
+        .mobile-toggle {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .desktop-nav, .desktop-actions {
+            display: none;
+          }
+          .mobile-toggle {
+            display: block;
+          }
+        }
+      `}</style>
     </header>
   );
 };

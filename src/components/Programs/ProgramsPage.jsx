@@ -48,7 +48,7 @@ const ProgramsPage = () => {
 
                 <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '900px' }}>
                     <h1 style={{
-                        fontSize: 'max(3rem, 5vw)',
+                        fontSize: 'clamp(2.5rem, 5vw, 4rem)',
                         marginBottom: 'var(--spacing-md)',
                         textShadow: '0 4px 20px rgba(0,0,0,0.5)',
                         letterSpacing: '-2px',

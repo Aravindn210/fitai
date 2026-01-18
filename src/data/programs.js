@@ -6,7 +6,7 @@ export const programs = [
         image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1000&auto=format&fit=crop",
         duration: "12 Weeks",
         level: "Advanced",
-        price: "$49/mo",
+        price: "₹3,999/mo",
         features: ["Workout Plan", "Diet Plan", "Tracking", "Live Sessions"]
     },
     {
@@ -16,7 +16,7 @@ export const programs = [
         image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop",
         duration: "8 Weeks",
         level: "Beginner",
-        price: "$39/mo",
+        price: "₹2,999/mo",
         features: ["Calorie Tracking", "Cardio Focus", "Diet Assist"]
     },
     {
@@ -26,7 +26,7 @@ export const programs = [
         image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=1000&auto=format&fit=crop",
         duration: "16 Weeks",
         level: "Intermediate",
-        price: "$55/mo",
+        price: "₹4,499/mo",
         features: ["Hypertrophy Focus", "Meal Plans", "Supplement Guide"]
     },
     {
@@ -36,7 +36,7 @@ export const programs = [
         image: "https://images.unsplash.com/photo-1434682881908-b43d0467b798?q=80&w=1000&auto=format&fit=crop",
         duration: "4 Weeks",
         level: "All Levels",
-        price: "$29/mo",
+        price: "₹2,499/mo",
         features: ["HIIT Workouts", "Endurance Training", "Heart Health"]
     },
     {
@@ -46,7 +46,7 @@ export const programs = [
         image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1000&auto=format&fit=crop",
         duration: "Ongoing",
         level: "Beginner",
-        price: "$60/mo",
+        price: "₹4,999/mo",
         features: ["Therapeutic Diet", "Disease Tracking", "Medical Consults"]
     }
 ];

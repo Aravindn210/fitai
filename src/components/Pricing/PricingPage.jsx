@@ -15,7 +15,7 @@ const PricingPage = () => {
                 {/* Basic Plan */}
                 <PricingCard
                     title="Basic Plan"
-                    price="$29"
+                    price="₹2,499"
                     features={[
                         "Workout Plans",
                         "Diet Plans",
@@ -27,7 +27,7 @@ const PricingPage = () => {
                 {/* Premium Plan */}
                 <PricingCard
                     title="Premium Plan"
-                    price="$59"
+                    price="₹4,999"
                     highlight
                     features={[
                         "Personalized Workouts & Diet",
@@ -41,7 +41,7 @@ const PricingPage = () => {
                 {/* Family Plan - From Sketch */}
                 <PricingCard
                     title="Family Health"
-                    price="$99"
+                    price="₹7,999"
                     tag="Best Value"
                     features={[
                         "Up to 5 Family Members",

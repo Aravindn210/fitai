@@ -9,9 +9,12 @@ const ProgramCard = ({ program }) => {
             borderRadius: 'var(--radius-lg)',
             overflow: 'hidden',
             transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-            border: '1px solid transparent'
+            border: '1px solid transparent',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column'
         }}>
-            <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
+            <div style={{ height: '200px', overflow: 'hidden', position: 'relative', flexShrink: 0 }}>
                 <div style={{
                     position: 'absolute',
                     top: 0, left: 0, width: '100%', height: '100%',
@@ -35,13 +38,15 @@ const ProgramCard = ({ program }) => {
                 </div>
             </div>
 
-            <div style={{ padding: 'var(--spacing-md)' }}>
-                <div className="flex justify-between items-start">
-                    <h3 style={{ fontSize: '1.25rem', marginBottom: 'var(--spacing-sm)' }}>{program.title}</h3>
+            <div style={{ padding: 'var(--spacing-md)', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <div className="flex justify-between items-start" style={{ marginBottom: 'var(--spacing-sm)' }}>
+                    <h3 style={{ fontSize: '1.25rem', margin: 0 }}>{program.title}</h3>
+                </div>
+                <div style={{ marginBottom: 'var(--spacing-sm)' }}>
                     <span style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--primary-color)' }}>{program.price}</span>
                 </div>
 
-                <div className="flex gap-md" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: 'var(--spacing-md)' }}>
+                <div className="flex gap-md" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: 'var(--spacing-md)', marginTop: 'auto' }}>
                     <div className="flex items-center gap-sm">
                         <Clock size={16} />
                         <span>{program.duration}</span>

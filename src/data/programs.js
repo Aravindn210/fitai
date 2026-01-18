@@ -47,7 +47,8 @@ export const programs = [
         duration: "Ongoing",
         level: "Beginner",
         price: "₹4,999/mo",
-        features: ["Therapeutic Diet", "Disease Tracking", "Medical Consults"]
+        features: ["Therapeutic Diet", "Disease Tracking", "Medical Consults"],
+        gridSpan: 2
     }
 ];
 

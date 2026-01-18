@@ -16,8 +16,20 @@ const ProgramList = ({ programs }) => {
             width: '100%'
         }}>
             {programs.map(program => (
-                <ProgramCard key={program.id} program={program} />
+                <div key={program.id} style={{
+                    gridColumn: program.gridSpan ? `span ${program.gridSpan}` : 'auto',
+                    // Responsive fix: On smaller screens, force span 1 (handled via media query usually, but inline style is tricky.
+                    // Ideally we'd use a class, but for now let's hope the auto-fill handles it or use a media query in style tag)
+                    minWidth: 0 // Prevent grid blowout
+                }} className={program.gridSpan ? 'col-span-2-md' : ''}>
+                    <ProgramCard program={program} />
+                </div>
             ))}
+            <style>{`
+                @media (max-width: 768px) {
+                  .col-span-2-md { grid-column: auto !important; }
+                }
+            `}</style>
         </div>
     );
 };

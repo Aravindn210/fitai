@@ -41,7 +41,7 @@ const ProgramDetailPage = () => {
                     }}>
                         {program.category}
                     </span>
-                    <h1 style={{ fontSize: '3.5rem', marginTop: 'var(--spacing-sm)', marginBottom: 'var(--spacing-sm)' }}>
+                    <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', marginTop: 'var(--spacing-sm)', marginBottom: 'var(--spacing-sm)' }}>
                         {program.title}
                     </h1>
                     <div className="flex gap-lg" style={{ fontSize: '1.2rem', color: 'var(--text-secondary)' }}>
@@ -53,7 +53,7 @@ const ProgramDetailPage = () => {
 
             {/* Content Section */}
             <div className="container" style={{ padding: 'var(--spacing-xl) 0' }}>
-                <div className="grid gap-lg" style={{ gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)' }}>
+                <div className="grid-sidebar-layout">
                     <div>
                         <h2 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-md)' }}>Program Overview</h2>
                         <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-secondary)', marginBottom: 'var(--spacing-lg)' }}>
@@ -62,7 +62,7 @@ const ProgramDetailPage = () => {
                         </p>
 
                         <h3 style={{ fontSize: '1.5rem', marginBottom: 'var(--spacing-md)' }}>What's Included</h3>
-                        <div className="grid gap-md" style={{ gridTemplateColumns: '1fr 1fr' }}>
+                        <div className="grid gap-md" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
                             {program.features.map((feature, idx) => (
                                 <div key={idx} className="flex items-center gap-sm" style={{ backgroundColor: 'var(--surface-color)', padding: '16px', borderRadius: 'var(--radius-md)' }}>
                                     <CheckCircle size={20} color="var(--primary-color)" />

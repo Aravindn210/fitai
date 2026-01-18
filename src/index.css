@@ -199,3 +199,15 @@ button {
     padding: 0 var(--spacing-sm);
   }
 }
+
+.grid-sidebar-layout {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
+
+@media (max-width: 900px) {
+  .grid-sidebar-layout {
+    grid-template-columns: 1fr;
+  }
+}

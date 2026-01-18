@@ -12,7 +12,7 @@ const ProgramList = ({ programs }) => {
 
     return (
         <div className="grid gap-lg" style={{
-            gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
             width: '100%'
         }}>
             {programs.map(program => (

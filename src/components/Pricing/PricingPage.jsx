@@ -11,7 +11,7 @@ const PricingPage = () => {
                 </p>
             </div>
 
-            <div className="grid gap-lg" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+            <div className="grid gap-lg" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
                 {/* Basic Plan */}
                 <PricingCard
                     title="Basic Plan"
